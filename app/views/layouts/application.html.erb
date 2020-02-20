@@ -1,15 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Scifi</title>
-    <%= csrf_meta_tags %>
+<html lang="en">
+<head>
+  <title>Scifi</title>
+<%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-  <body>
-    <%= yield %>
-  </body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+     
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Movies <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Books</a></li>
+          <li><a href="#">TV</a></li>
+          <li><a href="#">Games</a></li>
+        </ul>
+      </li>
+  </div>
+</nav>
+  
+<%= simple_form_for @user, url: examples_vertical_path do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :choises, as: :check_boxes, collection: User::CHOISES %>
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+<% end %>
+</body>
 </html>
