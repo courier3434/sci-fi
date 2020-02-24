@@ -17,28 +17,28 @@ ActiveRecord::Schema.define(version: 2020_02_14_133631) do
 
   create_table "books", force: :cascade do |t|
     t.string "name"
-    t.string "category"
+    t.text "category", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "games", force: :cascade do |t|
     t.string "name"
-    t.string "category"
+    t.text "category", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "movies", force: :cascade do |t|
     t.string "name"
-    t.string "category"
+    t.text "category", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "shows", force: :cascade do |t|
     t.string "name"
-    t.string "category"
+    t.text "category", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,14 @@
+
+<%= simple_form_for :some_symbol, url: surveys_path do |f| %>
+  <div class="textbox">
+    <br>
+  <%= f.input :categories, as: :check_boxes, 
+    collection: ["Action", "Romance", "Mystery", "Drama", "Horror", "Philosophical", "Comedy", "Animated"] %>
+</div>
+
+<div class="submit_button">
+<%= form_tag surveys_path do %>
+<%= submit_tag("Let's go!") %>
+</div>
+<% end %>
+<% end %>

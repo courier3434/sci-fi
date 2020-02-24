@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root 'movies#index'
+  root 'surveys#index'
+
+  post 'surveys' => 'survey#filter'
 end
