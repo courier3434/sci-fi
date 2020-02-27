@@ -5,9 +5,6 @@ class SurveyController < ApplicationController
   def filter
       categories = survey_params
       movie_options = []
-      book_options = []
-      show_options = []
-      game_options = []
       categories.shift
       
       Movie.all.each do |m|
@@ -18,6 +15,10 @@ class SurveyController < ApplicationController
         end
       end
 
+      categories = survey_params
+      book_options = []
+      categories.shift
+
       Book.all.each do |b|
         categories.each do |category|
 
@@ -26,6 +27,10 @@ class SurveyController < ApplicationController
         end
       end
 
+      categories = survey_params
+      game_options = []
+      categories.shift
+
       Game.all.each do |g|
         categories.each do |category|
 
@@ -33,6 +38,10 @@ class SurveyController < ApplicationController
             game_options.push(g)
         end
       end
+    
+      categories = survey_params
+      show_options = []
+      categories.shift
 
       Show.all.each do |s|
         categories.each do |category|
@@ -44,16 +53,33 @@ class SurveyController < ApplicationController
   end
 
   
-  @movies = movie_options.uniq
-  @books = book_options.uniq
-  @games = game_options.uniq
-  @shows = show_options.uniq
-
-   #  if params.question == 'your answer'
-   #       @movies = Movie.findAll(category: params.category)
-   #        render :some_view
-   #   end
-   # end
+@movies = movie_options.uniq
+  if params.question == 'your answer'
+          @movies = Movie.findAll(category: params.category)
+          render :some_view
+  end
+end
+    
+@books = book_options.uniq
+  if params.question == 'your answer'
+          @books = Book.findAll(category: params.category)
+          render :some_view
+  end
+end
+    
+@games = game_options.uniq
+  if params.question == 'your answer'
+          @games = Game.findAll(category: params.category)
+          render :some_view
+  end
+end
+    
+@shows = show_options.uniq
+    if params.question == 'your answer'
+          @shows = Show.findAll(category: params.category)
+          render :some_view
+    end
+end
 
   private
 
@@ -62,4 +88,3 @@ class SurveyController < ApplicationController
       # params.require(:some_symbol).permit(:categories)
     end
   end
-end
