@@ -1,13 +1,12 @@
 <div class= 'heading'><h1> What Type of Sci-Fi Are You Looking For? </h1></div>
-<%= simple_form_for :some_symbol, url: surveys_path do |f| %>
-  <div class="textbox">
+  <%= simple_form_for :some_symbol, url: surveys_path do |f| %>
+    <div class="textbox">
     <br>
-  <%= f.input :categories, as: :check_boxes, 
-    collection: ["Action", "Romance", "Mystery", "Drama", "Horror", "Philosophical", "Comedy", "Animated"] %>
-</div>
+      <%= f.input :categories, as: :check_boxes, 
+        collection: ["action", "romance", "mystery", "drama", "horror", "philosophical", "comedy", "animated"] %>
+    </div>
 
-<div class="submit_button">
-
-<%= submit_tag("Let's go!") %>
-</div>
+  <div class="submit_button">
+    <%= submit_tag("Let's go!") %>
+  </div>
 <% end %>

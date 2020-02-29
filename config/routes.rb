@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root 'surveys#index'
 
-  post 'surveys' => 'survey#filter'
+  post 'surveys' => 'surveys#filter'
 end
