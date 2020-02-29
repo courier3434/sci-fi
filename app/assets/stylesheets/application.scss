@@ -95,13 +95,13 @@ input:hover {
 }
 
 .textbox{
-    background-color:gray;
+    background-color:white;
     display: inline-block;
     width: 280px;
     margin-top: 50px;
     text-align: center;
     border-radius: 25px;
-    border: 2px solid black;
+    border: 5px solid black;
 }
 
 .submit_button{
@@ -181,4 +181,3 @@ abbr[title] {
   cursor: inherit !important;
   text-decoration: none !important;
 }
-

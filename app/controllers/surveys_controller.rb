@@ -65,6 +65,9 @@ class SurveysController < ApplicationController
       @shows = show_options.uniq
 
     render :template => "surveys/show"
+
+    binding.pry
+
   end
 
   
