@@ -1,22 +1,50 @@
+<div class = "suggestion_box1">
+  <div class = "ex3">
+  <b class= "titles"> Movies </b>
+  <% @movies.each do |m| %>
+   <b> <%= m.name %> </b>
+     <br />
 
-<hr>
-<% @movies.each do |m| %>
- <b> <%= m.name %> </b>
-<% end %>
-<hr>
+  <% end %>
+  <hr>
+  </div>
+</div>
 
-<% @shows.each do |s| %>
- <b> <%= s.name %> </b>
-<% end %>
+<div class = "suggestion_box2">
+  <div class = "ex3">
+  <b class= "titles"> Shows </b>
+  <% @shows.each do |s| %>
+   <b> <%= s.name %> </b>
+     <br />
+  <% end %>
 
-<hr>
+  <hr>
+  </div>
+</div>
 
-<% @games.each do |g| %>
- <b> <%= g.name %> </b>
-<% end %>
+<div class = "suggestion_box3">
+  <div class = "ex3">
 
-<hr>
+  <b class= "titles"> Games </b>
+  <% @games.each do |g| %>
+   <b> <%= g.name %> </b>
+    <br />
+  <% end %>
 
-<% @books.each do |b| %>
- <b> <%= b.name %> </b>
-<% end %>
+  <hr>
+  </div>
+</div>
+
+
+<div class = "suggestion_box4">
+  <div class = "ex3">
+    <b class= "titles"> Books </b>
+    <hr>
+    <% @books.each do |b| %>
+     <b> <%= b.name %> </b>
+     <hr>
+      <br />
+    <% end %>
+  </div>
+</div>
+

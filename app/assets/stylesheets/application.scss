@@ -1,5 +1,24 @@
+/*
+ *= require nprogress
+ *= require nprogress-bootstrap
+ *= require nprogress-turbolinks5
+ */
+
+ $nprogress-color: #37c8c9;
+
+@import "nprogress";
+@import "nprogress-bootstrap";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Audiowide|Unica+One&display=swap');
+
+
+div.ex3 {
+  width: auto;
+  height: 1000px;
+  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 
 .box {
   margin-top: 10px;
@@ -18,6 +37,64 @@
   font-weight: 900;
   text-align: center;
 }
+
+.suggestion_box1{
+  font-family: 'Audiowide', cursive;
+  font-size: 25px;
+  font-weight: 500;
+  background-color:white;
+    display: inline-block;
+    width: 280px;
+    text-align: center;
+    border-radius: 25px;
+    border: 5px solid black;
+    padding: 10px;
+    vertical-align: top;
+}
+.suggestion_box2{
+  font-family: 'Audiowide', cursive;
+  font-size: 25px;
+  font-weight: 500;
+  background-color:white;
+    display: inline-block;
+    width: 280px;
+    text-align: center;
+    border-radius: 25px;
+    border: 5px solid black;
+    padding: 10px;
+    vertical-align: top;
+}
+.suggestion_box3{
+  font-family: 'Audiowide', cursive;
+  font-size: 25px;
+  font-weight: 500;
+  background-color:white;
+    display: inline-block;
+    width: 280px;
+    text-align: center;
+    border-radius: 25px;
+    border: 5px solid black;
+    padding: 10px;
+    vertical-align: top;
+}
+.suggestion_box4{
+  font-family: 'Audiowide', cursive;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 500;
+  background-color:white;
+  width: 280px;
+  text-align: center;
+  border-radius: 25px;
+  border: 5px solid black;
+  padding: 10px;
+  vertical-align: top;
+    }
+.titles{
+  font-family: 'Unica One', cursive;
+  font-size: 40px;
+}
+
 
 body {
 display:block;

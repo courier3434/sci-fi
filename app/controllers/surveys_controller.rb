@@ -66,8 +66,6 @@ class SurveysController < ApplicationController
 
     render :template => "surveys/show"
 
-    binding.pry
-
   end
 
   
