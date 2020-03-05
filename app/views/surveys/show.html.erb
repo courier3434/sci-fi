@@ -1,37 +1,36 @@
 <div class = "suggestion_box1">
   <div class = "ex3">
-  <b class= "titles"> Movies </b>
-  <% @movies.each do |m| %>
-   <b> <%= m.name %> </b>
-     <br />
-
-  <% end %>
-  <hr>
+    <b class= "titles"> Movies </b>
+      <hr>
+      <% @movies.each do |m| %>
+       <%= m.name %> 
+       <hr>
+         <br />
+      <% end %>
   </div>
 </div>
 
 <div class = "suggestion_box2">
   <div class = "ex3">
-  <b class= "titles"> Shows </b>
-  <% @shows.each do |s| %>
-   <b> <%= s.name %> </b>
-     <br />
-  <% end %>
-
-  <hr>
+    <b class= "titles"> Shows </b>
+    <hr>
+    <% @shows.each do |s| %>
+      <%= s.name %>
+      <hr>
+        <br />
+    <% end %>
   </div>
 </div>
 
 <div class = "suggestion_box3">
   <div class = "ex3">
-
-  <b class= "titles"> Games </b>
-  <% @games.each do |g| %>
-   <b> <%= g.name %> </b>
-    <br />
-  <% end %>
-
-  <hr>
+    <b class= "titles"> Games </b>
+    <hr>
+    <% @games.each do |g| %>
+      <%= g.name %>
+      <hr>
+        <br />
+    <% end %>
   </div>
 </div>
 
@@ -41,10 +40,9 @@
     <b class= "titles"> Books </b>
     <hr>
     <% @books.each do |b| %>
-     <b> <%= b.name %> </b>
+      <%= b.name %> 
      <hr>
       <br />
     <% end %>
   </div>
 </div>
-

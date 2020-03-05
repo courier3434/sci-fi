@@ -1,9 +1,4 @@
 class SurveysController < ApplicationController
-   
-      # @games = Game.findAll(category: params.category)
-      # @shows = Show.findAll(category: params.category)
-      # @movies = Movie.findAll(category: params.category)
-
 
 
   def filter
@@ -16,9 +11,9 @@ class SurveysController < ApplicationController
       Movie.all.each do |m|
         categories.each do |category|
 
-             if m.category.include?(category) #&& movie_options.length < 40
+          if m.category.include?(category) #&& movie_options.length < 40
               movie_options.push(m)
-            end
+          end
         end
       end
   
