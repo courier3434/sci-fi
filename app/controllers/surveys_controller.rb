@@ -11,7 +11,7 @@ class SurveysController < ApplicationController
       Movie.all.each do |m|
         categories.each do |category|
 
-          if m.category.include?(category) #&& movie_options.length < 40
+          if m.category.include?(category)
               movie_options.push(m)
           end
         end
@@ -25,7 +25,7 @@ class SurveysController < ApplicationController
       Book.all.each do |b|
         categories.each do |category|
 
-          if b.category.include?(category) #&& book_options.length < 40
+          if b.category.include?(category)
             book_options.push(b)
           end
         end
@@ -39,7 +39,7 @@ class SurveysController < ApplicationController
       Game.all.each do |g|
         categories.each do |category|
 
-          if g.category.include?(category) #&& game_options.length < 40
+          if g.category.include?(category)
             game_options.push(g)
           end
         end
@@ -52,7 +52,7 @@ class SurveysController < ApplicationController
       Show.all.each do |s|
         categories.each do |category|
 
-          if s.category.include?(category) #&& show_options.length < 40
+          if s.category.include?(category) 
             show_options.push(s)
           end
         end
@@ -60,7 +60,6 @@ class SurveysController < ApplicationController
       @shows = show_options.uniq
 
     render :template => "surveys/show"
-  binding.pry
 
   end
 
@@ -68,6 +67,5 @@ class SurveysController < ApplicationController
   private
     def survey_params
       params[:some_symbol][:categories]
-      # params.require(:some_symbol).permit(:categories)
     end
 end

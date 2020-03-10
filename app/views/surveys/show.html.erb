@@ -1,9 +1,13 @@
 <div class = "suggestion_box1">
   <div class = "ex3">
     <b class= "titles"> Movies </b>
+    <h3 class ="heading3"> Click to see the plot!</h3>
       <hr>
       <% @movies.each do |m| %>
-       <%= m.name %> 
+      <div  id=<%= m.id %> >
+        <div value=<%= m.id %> class = "movie_name"> <%= m.name %> </div> 
+        <br />
+      </div>
        <hr>
          <br />
       <% end %>
@@ -13,12 +17,16 @@
 <div class = "suggestion_box2">
   <div class = "ex3">
     <b class= "titles"> Shows </b>
+        <h3 class ="heading2"> Click to see the plot!</h3>
     <hr>
     <% @shows.each do |s| %>
-      <%= s.name %>
-      <hr>
-        <br />
-    <% end %>
+    <div  id=<%= s.id %> >
+        <div value=<%= s.id %> class = "show_name"> <%= s.name %> </div> 
+      <br />
+      </div>
+       <hr>
+         <br />
+      <% end %>
   </div>
 </div>
 
@@ -46,3 +54,5 @@
     <% end %>
   </div>
 </div>
+
+<%= javascript_include_tag 'movies' %>
