@@ -3,7 +3,7 @@ movies.one('click', function(){
   // console.log(this.getAttribute("id"))
   var movie_id = this.getAttribute("value")
   var movie = this.innerHTML.trim()
-  var url = 'http://www.omdbapi.com/?t='+ movie +'&apikey=fe360526'
+  var url = 'https://www.omdbapi.com/?t='+ movie +'&apikey=fe360526'
   console.log(url);
    $.ajax({
      url: url,
@@ -24,7 +24,7 @@ shows.one('click', function(){
   // console.log(this.getAttribute("id"))
   var show_id = this.getAttribute("value")
   var show = this.innerHTML.trim()
-  var url = 'http://www.omdbapi.com/?t='+ show +'&apikey=fe360526'
+  var url = 'https://www.omdbapi.com/?t='+ show +'&apikey=fe360526'
   console.log(url);
    $.ajax({
      url: url,
